@@ -1,0 +1,17 @@
+.table{
+  :global(.ant-table-tbody),
+  :global(.ant-table-thead){
+    tr>td,
+    tr>th{
+      border-bottom: none;
+    }
+  }
+}
+
+.group{
+  display: flex;
+  align-items: center;
+  .cont{
+    flex: 1;
+  }
+}

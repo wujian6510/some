@@ -1,0 +1,91 @@
+.wrap{
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+  padding-top: 70px + $padding-l;
+}
+
+.container{
+  dl,dt,dd{
+    margin: 0;
+    padding: 0;
+  }
+  .group{
+    background: $bg-default;
+    border: 1px solid $border-color;
+    .panel{
+      padding: $padding-l;
+      .panelHead{
+        display: flex;
+        align-items: center;
+        .panelTit{
+          font-size: $font-size-heading;
+          color: $color-text-base;
+          flex: 1;
+          width: 1px;
+        }
+        & + .panelBody{
+          margin-top: $padding-s;
+        }
+      }
+      & + .panel{
+        border-top: 1px solid $dividing-color;
+        margin-top: $padding-l;
+        padding-top: $padding-l;
+      }
+    }
+    .column{
+      .colTit{
+        font-size: $font-size-heading;
+        color: $primary-color;
+        & + .colBody{
+          margin-top: $padding-m;
+        }
+      }
+      & + .column{
+        margin-top: $padding-l;
+        padding-top: $padding-l;
+        border-top: 1px solid $border-color;
+      }
+    }
+    .dl{
+      display: flex;
+      .dt{
+        color: $color-text-paragraph;
+        font-weight: normal;
+        width: 100px;
+      }
+      .dd{
+        flex: 1;
+        .span{
+          margin-right: $padding-xl;
+        }
+        .section{
+          & + .section{
+            margin-top: $padding-xs;
+          }
+        }
+      }
+      & + .dl{
+        margin-top: $padding-xs;
+      }
+    }
+  }
+}
+
+
+.footer{
+  padding: $padding-l 0;
+  text-align: right;
+  :global(.ant-btn + .ant-btn){
+    margin-left: $padding-s;
+  }
+  .total{
+    font-size: $font-size-xl;
+    color: $color-text-base;
+    font-weight: bold;
+    display: inline-block;
+    margin-right: $padding-l;
+    vertical-align: middle;
+  }
+}

@@ -1,0 +1,63 @@
+.list{
+  padding: 0 $padding-l;
+  flex: 1;
+  overflow-x: hidden;
+  overflow-y: auto;
+  .item{
+    color: $color-text-base;
+    margin-bottom: $padding-s;
+    @include textEllipsis;
+    a{
+      color: $color-text-base;
+      &:hover{
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+.panel{
+  margin-bottom: 0;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  .title{
+    font-size: $font-size-xl;
+    color: $color-text-base;
+    :global(.iconfont){
+      position: relative;
+      top: -1px;
+      color: $warning-color;
+      font-size: $font-size-heading;
+      margin-right: $padding-xs;
+    }
+  }
+  .search{
+    padding: 0 $padding-l $padding-m  $padding-l;
+  }
+  :global(.ui-panel-head){
+    padding: $padding-l;
+    padding-bottom: 0;
+  }
+  :global(.ui-panel-body){
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+  :global(.ui-panel-footer){
+    padding: $padding-m $padding-l;
+  }
+}
+
+.btn{
+  background: mix(#fff, $primary-color, 90%);
+  border-color: mix(#fff, $primary-color, 90%);
+  color: $primary-color;
+  :global(.iconfont){
+    margin-right: $padding-xs;
+    font-size: $font-size-xl;
+  }
+}

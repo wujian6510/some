@@ -1,0 +1,18 @@
+.table{
+  :global(.ant-table-placeholder){
+    border-bottom: none;
+  }
+}
+.panel{
+  margin-bottom: $padding-l;
+  & + .panel{
+    border-top: 1px solid $dividing-color;
+    padding-top: $padding-l;
+  }
+  .title{
+    font-size: $font-size-lg;
+    font-weight: bold;
+    color: $color-text-base;
+    margin-bottom: $padding-m;
+  }
+}

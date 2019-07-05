@@ -1,0 +1,21 @@
+.wrap{
+  padding-top: 100px + $padding-xl;
+  padding-bottom: 50px + $padding-xl;
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+}
+.head{
+  padding-bottom: 0;
+  .tabs{
+    :global(.ant-tabs-bar){
+      border-bottom: none;
+      :global(.ant-tabs-nav-container){
+        margin-bottom: 0;
+        :global(.ant-tabs-tab){
+          padding-top: 0;
+        }
+      }
+    }
+  }
+}

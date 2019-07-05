@@ -1,0 +1,60 @@
+.wrap{
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+  padding-top: 140px;
+  padding-bottom: 80px;
+  .head{
+    .packageInfo{
+      display: flex;
+      align-items: center;
+      .tit{
+        font-size: $font-size-xl;
+        color: $color-text-base;
+        & + .cont{
+          margin-left: $padding-m;
+        }
+      }
+      .cont{
+        flex: 1;
+        :global(.ant-tag){
+          border: none;
+        }
+      }
+    }
+  }
+}
+
+
+.btnDel{
+  position: absolute;
+  z-index: 2;
+  right: $padding-s;
+  top: $padding-s;
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 12px;
+  background: mix(#fff, $danger-color, 90%);
+  border-color: mix(#fff, $danger-color, 90%);
+  color: $danger-color;
+}
+
+.btnSelect{
+  width: 18px;
+  height: 18px;
+  padding: 0;
+  line-height: 18px;
+  text-align: center;
+  border-radius: 9px;
+  background: mix(#fff, $primary-color, 90%);
+  border-color: mix(#fff, $primary-color, 90%);
+  color: mix(#fff, $primary-color, 20%);
+  &:hover{
+    background: mix(#fff, $primary-color, 80%);
+    border-color: mix(#fff, $primary-color, 80%);
+  }
+}
+

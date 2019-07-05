@@ -1,0 +1,79 @@
+.wrap{
+  padding: $padding-m 0;
+  background: $bg-default;
+  .main{
+    margin: 0 auto;
+  }
+  &:global(.fixed){
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    z-index: 200;
+    border-bottom: 1px solid $border-color;
+    .main{
+      min-width: $min-width;
+      width: $default-width;
+    }
+  }
+  .dl{
+    display: flex;
+    align-items: center;
+    .dt{
+      flex: 1;
+      display: flex;
+      & + .extra{
+        margin-left: $padding-m;
+      }
+    }
+    .extra{
+      :global(.ant-btn + .ant-btn){
+        margin-left: $padding-s;
+      }
+    }
+    .steps{
+      width: 400px;
+      display: flex;
+      :global(.ant-steps-item){
+        &:global(.ant-steps-item-finish){
+          :global(.ant-steps-item-icon){
+            border-color: $success-color;
+            :global(.ant-steps-icon){
+              color: $success-color;
+            }
+          }
+          :global(.ant-steps-item-content .ant-steps-item-title::after){
+           background: $success-color;
+          }
+        }
+        &:global(.ant-steps-item-process){
+          :global(.ant-steps-item-icon){
+            background: $success-color;
+            border-color: $success-color;
+          }
+        }
+      }
+    }
+    .dt{
+      align-items: center;
+      .icon{
+        font-size: $font-size-strong;
+        margin-right: $padding-s;
+        color: $primary-color;
+        line-height: 1.1;
+      }
+      .title{
+        font-size: $font-size-heading;
+        color: $primary-color;
+        font-weight: bold;
+      }
+      .subtitle{
+        font-size: $font-size-lg;
+        color: $color-text-secondary;
+      }
+    }
+    & + .container{
+      margin-top: $padding-m;
+    }
+  }
+}

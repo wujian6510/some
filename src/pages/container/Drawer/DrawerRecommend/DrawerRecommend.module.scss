@@ -1,0 +1,53 @@
+.list{
+  dl,dd,dt{
+    margin: 0;
+    padding: 0;
+  }
+  .dl{
+    display: flex;
+    margin-bottom: $padding-s;
+    .dt{
+      color: $danger-color;
+      line-height: 1.8;
+      width: 30px;
+    }
+    .dd{
+      flex: 1;
+      padding-bottom: $padding-s;
+      border-bottom: 1px solid $dividing-color;
+      .tit,
+      .cont{
+        margin-bottom: $padding-s;
+      }
+      .tit{
+        font-size: $font-size-lg;
+        color: $color-text-base;
+        font-weight: bold;
+      }
+      .cont{
+        color: $color-text-paragraph;
+        .section{
+          margin: 0 0 $padding-s 0;
+          display: flex;
+          .sectionTit{
+            & + .sectionCont{
+              margin-left: $padding-s;
+            }
+          }
+          .sectionCont{
+            flex: 1;
+          }
+        }
+      }
+      .ctrl{
+        a{
+          color: $primary-color;
+          margin-right: $padding-l;
+          :global(.iconfont){
+            margin-right: $padding-xs;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,102 @@
+.drawer{
+  padding: 0 !important;
+  overflow: hidden !important;
+  display: flex;
+  flex-direction: column;
+  .tabs{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    :global(.ant-tabs-content){
+      padding-top: $padding-m;
+      &,:global(.ant-tabs-tabpane.ant-tabs-tabpane-active){
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+      }
+    }
+  }
+  .form{
+    padding: $padding-l $padding-xs;
+  }
+}
+
+.row{
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+  .col{
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    & + .col{
+      border-left: 1px solid $border-color;
+    }
+    .colTit{
+      font-size: $font-size-lg;
+      font-weight: bold;
+      padding: $padding-m $padding-l;
+      & + .colContainer{
+        .colMain,
+        .colForm{
+          padding-top: 0;
+        }
+      }
+    }
+    .colSearch{
+      padding: 0 $padding-l;
+    }
+    .colContainer{
+      @include HeightOverflowY;
+    }
+    .colMain{
+      padding: $padding-m;
+    }
+    .colForm{
+      padding: $padding-m $padding-l;
+    }
+  }
+  .list{
+    margin: 0;
+    padding: 0;
+    .item{
+      margin: 0;
+      padding: $padding-xs $padding-s;
+      border-radius: $border-radius-base;
+      transition: all .3s;
+      display: flex;
+      align-items: center;
+      &:hover{
+        background: mix( #fff, $info-color, 90%);
+      }
+      .itemCont{
+        flex: 1;
+        width: 1px;
+        @include textEllipsis;
+        & + .btn{
+          margin-left: $padding-m;
+        }
+      }
+    }
+    .btn{
+      width: 16px;
+      height: 16px;
+      line-height: 16px;
+      text-align: center;
+      border: none;
+      border-radius: 8px;
+      color: $color-text-base-inverse;
+      &:global(.success){
+        background: $success-color;
+      }
+      &:global(.warning){
+        background: $warning-color;
+      }
+      :global(.iconfont){
+        font-size: $font-size-sm;
+        vertical-align: baseline;
+      }
+    }
+  }
+}

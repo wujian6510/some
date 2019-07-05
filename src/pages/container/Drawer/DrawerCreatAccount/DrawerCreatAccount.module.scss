@@ -1,0 +1,12 @@
+.group{
+  & + .group{
+    padding-top: $padding-m;
+    border-top: 1px solid $border-color;
+  }
+  .title{
+    font-size: $font-size-lg;
+    color: $color-text-base;
+    font-weight: bold;
+    margin-bottom: $padding-m;
+  }
+}

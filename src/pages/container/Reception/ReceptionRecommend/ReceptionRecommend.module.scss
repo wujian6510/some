@@ -1,0 +1,39 @@
+.panel{
+  margin-bottom: 0;
+  .title{
+    font-size: $font-size-xl;
+    color: $color-text-base;
+    :global(.iconfont){
+      position: relative;
+      top: -1px;
+      color: $warning-color;
+      font-size: $font-size-heading;
+      margin-right: $padding-xs;
+    }
+  }
+}
+
+.list{
+  margin-bottom: 0;
+  .item{
+    display: flex;
+    & + .item{
+      margin-top: $padding-m;
+      padding-top: $padding-m;
+      border-top: 1px solid $border-color;
+    }
+    .tit{
+      color: $color-text-base;
+      flex: 1;
+    }
+    .ctrl{
+      a{
+        color: $primary-color;
+        :global(.iconfont){
+          font-size: $font-size-base;
+          margin-right: $padding-xs;
+        }
+      }
+    }
+  }
+}

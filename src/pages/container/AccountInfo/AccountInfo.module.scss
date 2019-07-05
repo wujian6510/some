@@ -1,0 +1,93 @@
+.wrap{
+  padding-top: 70px + $padding-l;
+}
+
+.container{
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+  background: $bg-default;
+  display: flex;
+  border: 1px solid $border-color;
+  .panel{
+    margin-bottom: 0;
+  }
+  .accounts{
+    flex: 1;
+    padding: $padding-l;
+    .search{
+      display: flex;
+      align-items: center;
+      margin-bottom: $padding-s;
+      .select{
+        width: 100px;
+      }
+      .input{
+        flex: 1;
+      }
+    }
+    .list{
+      &,dl,dt,dd,li{
+        margin: 0;
+        padding: 0;
+      }
+      .item{
+        padding: $padding-s 0;
+        display: flex;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+        &:last-child{
+          border-bottom: none;
+        }
+        .extra{
+          :global(.ant-btn + .ant-btn){
+            margin-left: $padding-s;
+          }
+        }
+        .dl{
+          flex: 1;
+          & + .extra{
+            margin-left: $padding-m;
+          }
+        }
+        .dt{
+          font-size: $font-size-lg;
+          color: $color-text-base;
+          font-weight: bold;
+          & + .dd{
+            margin-top: $padding-xs;
+          }
+        }
+        .dd{
+          font-size: $font-size-base;
+          color: $color-text-paragraph;
+        }
+      }
+    }
+    .ctrl{
+      padding: $padding-s;
+      text-align: center;
+      :global(.iconfont){
+        margin-right: $padding-xs;
+      }
+    }
+  }
+  .details{
+    flex: 1;
+    padding: $padding-l;
+    border-left: 1px solid $border-color;
+    .group{
+      & + .group{
+        margin-top: $padding-m;
+        padding-top: $padding-m;
+        border-top: 1px solid $border-color;
+      }
+      .title{
+        font-size: $font-size-lg;
+        color: $color-text-base;
+        font-weight: bold;
+        margin-bottom: $padding-m;
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.wrap{
+  margin: 0 auto;
+  padding-top: $padding-xl;
+  min-width: $min-width;
+  width: $default-width;
+}
+
+.banner{
+  margin: 0 auto;
+  padding: $padding-xl*2 0 $padding-xl 0;
+  display: block;
+  &,img{
+    width: 395px;
+  }
+}

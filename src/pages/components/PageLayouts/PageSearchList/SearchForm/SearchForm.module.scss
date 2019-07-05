@@ -1,0 +1,36 @@
+.container{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .btns{
+    :global(.ant-btn + .ant-btn){
+      margin-left: $padding-s;
+    }
+  }
+  .form{
+    :global(.ant-form.ant-form-inline){
+      :global(.ant-row.ant-form-item:last-child){
+        margin-right: 0;
+      }
+    }
+  }
+  &:global(.block){
+    display: block;
+    .form{
+      & + .btns{
+        margin-top: $padding-m;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 980px){
+  .container{
+    display: block;
+    .btns{
+      & + .form{
+        margin-top: $padding-m;
+      }
+    }
+  }
+}

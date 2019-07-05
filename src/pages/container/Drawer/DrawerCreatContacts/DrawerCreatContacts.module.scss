@@ -1,0 +1,17 @@
+.aItem{
+  display: flex;
+  .aItemCont{
+    flex: 1;
+    .span{
+      margin-right: $padding-xs;
+    }
+    & + .aItemCtrl{
+      margin-left: $padding-s;
+    }
+  }
+}
+
+.aCtrl{
+  border-top: 1px solid $dividing-color;
+  text-align: center;
+}

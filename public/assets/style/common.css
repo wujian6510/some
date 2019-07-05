@@ -1,0 +1,518 @@
+@charset "UTF-8";
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+button,
+input,
+textarea,
+hr,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+hr {
+  height: 0;
+  border: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+}
+
+/*CSS reset*/
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  position: relative;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+body {
+  background: #fafafa;
+}
+
+.root,
+.page {
+  position: relative;
+  height: 100%;
+}
+
+.root {
+  min-width: 1000px;
+}
+
+.page.open {
+  display: block;
+}
+
+.page.hide {
+  display: none;
+}
+
+.page.gray {
+  background: #fafafa;
+}
+
+.text-primary {
+  color: #4477EE;
+}
+
+.text-success {
+  color: #33BB66;
+}
+
+.text-danger {
+  color: #FF3344;
+}
+
+.text-warning {
+  color: #FF9933;
+}
+
+.text-info {
+  color: #7788AA;
+}
+
+.text-strong {
+  color: #FF3344;
+}
+
+.text-link {
+  color: #007AFF;
+}
+
+a.text-primary {
+  color: #4477EE;
+}
+
+a.text-primary:hover, a.text-primary:active {
+  color: #5785f0;
+}
+
+a.text-success {
+  color: #33BB66;
+}
+
+a.text-success:hover, a.text-success:active {
+  color: #47c275;
+}
+
+a.text-danger {
+  color: #FF3344;
+}
+
+a.text-danger:hover, a.text-danger:active {
+  color: #ff4757;
+}
+
+a.text-warning {
+  color: #FF9933;
+}
+
+a.text-warning:hover, a.text-warning:active {
+  color: #ffa347;
+}
+
+a.text-info {
+  color: #7788AA;
+}
+
+a.text-info:hover, a.text-info:active {
+  color: #8594b3;
+}
+
+a.text-strong {
+  color: #FF3344;
+}
+
+a.text-strong:hover, a.text-strong:active {
+  color: #ff4757;
+}
+
+a.text-link {
+  color: #007AFF;
+}
+
+a.text-link:hover, a.text-link:active {
+  color: #1a87ff;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.text-right {
+  text-align: right;
+}
+
+.ant-btn.btn-success {
+  background: #33BB66;
+  border-color: #33BB66;
+  color: #fff;
+}
+
+.ant-btn.btn-success:hover, .ant-btn.btn-success:focus, .ant-btn.btn-success:active, .ant-btn.btn-success.active {
+  background: #5cc985;
+  border-color: #33BB66;
+  color: #fff;
+}
+
+.ant-btn.btn-info {
+  background: #7788AA;
+  border-color: #7788AA;
+  color: #fff;
+}
+
+.ant-btn.btn-info:hover, .ant-btn.btn-info:focus, .ant-btn.btn-info:active, .ant-btn.btn-info.active {
+  background: #92a0bb;
+  border-color: #7788AA;
+  color: #fff;
+}
+
+.ant-btn.btn-warn {
+  background: #FF9933;
+  border-color: #FF9933;
+  color: #fff;
+}
+
+.ant-btn.btn-warn:hover, .ant-btn.btn-warn:focus, .ant-btn.btn-warn:active, .ant-btn.btn-warn.active {
+  background: #ffad5c;
+  border-color: #FF9933;
+  color: #fff;
+}
+
+.ant-btn.btn-danger {
+  background: #FF3344;
+  border-color: #FF3344;
+  color: #fff;
+}
+
+.ant-btn.btn-danger:hover, .ant-btn.btn-danger:focus, .ant-btn.btn-danger:active, .ant-btn.btn-danger.active {
+  background: #ff5c69;
+  border-color: #FF3344;
+  color: #fff;
+}
+
+.btns .ant-btn + .ant-btn {
+  margin-left: 10px;
+}
+
+.ant-form.ant-form-horizontal.form .ant-row:last-child .ant-row.ant-form-item {
+  margin-bottom: 0;
+}
+
+.ant-form.ant-form-horizontal.form .ant-row:last-child .ant-row.ant-form-item .ant-btn + .ant-btn {
+  margin-left: 10px;
+}
+
+.ant-form.ant-form-horizontal.form .ant-row.ant-form-item {
+  margin-bottom: 10px;
+}
+
+.ant-form.ant-form-inline.form-inline .ant-row.ant-form-item:last-child {
+  margin-right: 0;
+}
+
+.ant-form.ant-form-inline.form-inline .ant-row.ant-form-item:last-child .ant-btn + .ant-btn {
+  margin-left: 10px;
+}
+
+.ant-form.ant-form-horizontal.form-horizontal .ant-btn + .ant-btn {
+  margin-left: 10px;
+}
+
+.ant-form.ant-form-horizontal.form-horizontal .ant-row.ant-form-item {
+  margin-bottom: 10px;
+}
+
+.ant-form.ant-form-horizontal.form-horizontal .ant-row.ant-form-item textarea.ant-input {
+  margin-top: 4px;
+}
+
+.ant-form.ant-form-horizontal.form-horizontal .ant-row.ant-form-item .ant-form-item-label {
+  text-align: left;
+}
+
+.ant-form.ant-form-horizontal.form-horizontal .ant-row:last-child .ant-row.ant-form-item {
+  margin-bottom: 0;
+}
+
+/* ui组件样式-到公共样式方便调整 */
+.ui-panel {
+  margin-bottom: 20px;
+}
+
+.ui-panel .ui-panel-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.ui-panel .ui-panel-head .ui-panel-title {
+  font-size: 16px;
+  color: #333;
+}
+
+.ui-panel .ui-panel-head .ui-panel-title + .ui-panel-extra {
+  margin-left: 15px;
+}
+
+.ui-panel .ui-panel-head + .ui-panel-body,
+.ui-panel .ui-panel-head + .ui-panel-footer {
+  padding-top: 15px;
+}
+
+.ui-panel .ui-panel-body + .ui-panel-body,
+.ui-panel .ui-panel-body + .ui-panel-footer {
+  padding-top: 15px;
+}
+
+.ui-panel.large .ui-panel-head .ui-panel-title {
+  font-size: 20px;
+}
+
+/* 重置antd样式(把表单置灰，设置没有变量的表单元素置灰，并保留状态) */
+.input-group {
+  display: inline-table;
+  width: 100%;
+  position: relative;
+  line-height: normal;
+}
+
+.input-group > .ant-input-group-wrapper .ant-input-group-addon:after,
+.input-group > .ant-input-wrapper.ant-input-group .ant-input-group-addon:after {
+  content: ':';
+}
+
+.input-group.required > .ant-input-group-wrapper .ant-input-group-addon:before,
+.input-group.required > .ant-input-wrapper.ant-input-group .ant-input-group-addon:before {
+  content: '*';
+  margin-right: 5px;
+  color: #FF3344;
+}
+
+.input-group .addon-before {
+  display: table-cell;
+  border: 1px solid #F4F6F8;
+  background: #F4F6F8;
+  padding: 0 10px;
+  line-height: 1;
+  width: 1px;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 4px 0 0 4px;
+  border-right: none;
+  padding-right: 5px;
+}
+
+.input-group .addon-before:after {
+  content: ":";
+}
+
+.input-group .addon-before.disabled {
+  background: #f5f5f5;
+  color: #c6c7cc;
+  cursor: not-allowed;
+}
+
+.input-group .addon-before.required:before {
+  content: '*';
+  margin-right: 5px;
+  color: #FF3344;
+}
+
+.input-group .addon-before + .select .ant-select-selection.ant-select-selection--single {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group .addon-before + .select .ant-select-selection.ant-select-selection--single .ant-select-selection__rendered {
+  margin-left: 5px;
+}
+
+.input-group .addon-before + .datePicker .ant-calendar-picker .ant-calendar-picker-input.ant-input {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.input-group.has-extra .ant-input-group-wrapper + * {
+  margin-left: -1px;
+}
+
+.input-group .ant-ipnut:active, .input-group .ant-ipnut:focus, .input-group .ant-ipnut:hover {
+  z-index: 2;
+}
+
+.input-group .ant-btn {
+  padding-left: 10px;
+  padding-right: 10px;
+  border-color: #F4F6F8;
+  background: #F4F6F8;
+}
+
+.input-group .ant-btn:active, .input-group .ant-btn:hover {
+  border-color: #4477EE;
+  z-index: 2;
+}
+
+.input-group .select {
+  display: table-cell;
+}
+
+.input-group .datePicker {
+  display: table-cell;
+  width: 100%;
+  line-height: normal;
+}
+
+.input-group .datePicker .ant-calendar-picker {
+  width: 100%;
+}
+
+.input-group.ant-input-group {
+  display: -webkit-inline-box !important;
+  display: -ms-inline-flexbox !important;
+  display: inline-flex !important;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+}
+
+.input-group.ant-input-group > .ant-input-group-wrapper {
+  -webkit-box-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  top: 0 !important;
+  border-radius: 0;
+}
+
+.input-group.ant-input-group > .ant-input-group-wrapper .ant-input {
+  border-radius: 0;
+}
+
+.input > .ant-input-group-wrapper .ant-input-group-addon:after,
+.input > .ant-input-wrapper.ant-input-group .ant-input-group-addon:after {
+  content: ':';
+}
+
+.input.required > .ant-input-group-wrapper .ant-input-group-addon:before,
+.input.required > .ant-input-wrapper.ant-input-group .ant-input-group-addon:before {
+  content: '*';
+  margin-right: 5px;
+  color: #FF3344;
+}
+
+.ant-select .ant-select-selection {
+  background: #F4F6F8;
+  border-color: #F4F6F8;
+}
+
+.ant-calendar .ant-calendar-input {
+  background: #fff !important;
+}
+
+.ant-input-number {
+  border-color: #F4F6F8 !important;
+}
+
+.has-error .input-group .addon-before {
+  border-color: #FF3344;
+}
+
+.has-error .input-group .ant-btn {
+  border-color: #FF3344;
+}
+
+.has-error .ant-select .ant-select-selection {
+  border-color: #FF3344;
+}
+
+.has-error .ant-input-number {
+  border-color: #FF3344 !important;
+}
+
+/*# sourceMappingURL=common.css.map */

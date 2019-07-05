@@ -1,0 +1,40 @@
+.wrap{
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+  padding-top: 70 + $padding-l;
+  padding-bottom: 80px;
+}
+
+.bar,
+.table{
+  margin-bottom: $padding-l;
+}
+
+.bar{
+  margin-bottom: $padding-l;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: $padding-l $padding-xl;
+  .title{
+    margin-right: $padding-xl;
+    font-size: $font-size-heading;
+    font-weight: bold;
+    color: $color-text-base;
+  }
+}
+
+.cell{
+  margin-bottom: $padding-l;
+}
+
+.table{
+  :global(.ant-table-tbody),
+  :global(.ant-table-thead){
+    tr>td,
+    tr>th{
+      border-bottom: none;
+    }
+  }
+}

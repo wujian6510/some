@@ -1,0 +1,44 @@
+.wrap{
+  padding-top: 70px + $padding-l;
+  padding-bottom: 60px + $padding-l;
+}
+
+.container{
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+  .info{
+    display: flex;
+    .pic{
+      &,img{
+        display: block;
+        width: 72px;
+        height: 86px;
+      }
+      & + .main{
+        margin-left: $padding-l;
+      }
+    }
+    .main{
+      flex: 1;
+    }
+  }
+  .inputName{
+    background: none;
+    border: none;
+    font-size: $font-size-heading;
+  }
+  .inputGroup{
+    position: relative;
+    display: inline-flex !important;
+    width: 100%;
+    align-items: center;
+    :global(.ant-select).select{
+      width: 150px;
+      margin-right: $padding-s;
+    }
+    :global(.ant-btn){
+      margin-left: $padding-s;
+    }
+  }
+}

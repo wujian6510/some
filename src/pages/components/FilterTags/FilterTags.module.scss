@@ -1,0 +1,41 @@
+.column{
+  margin-bottom: $padding-m;
+  dl,dt,dd,ul,li{
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+  }
+  dl{
+    display: flex;
+    & + dl{
+      margin-top: $padding-s;
+    }
+    dt{
+      width: 60px;
+      line-height: 32px;
+      color: $color-text-paragraph;
+      &:after{
+        content:':'
+      }
+      & + dd{
+        margin-left: $padding-m;
+      }
+    }
+    dd{
+      flex: 1;
+      line-height: 32px;
+      .item{
+        line-height: 24px;
+        &:hover,
+        &:focus{
+          color: $warning-color;
+          background: none;
+        }
+        &:global(.ant-tag-checkable-checked){
+          background: $warning-color;
+          color: #fff;
+        }
+      }
+    }
+  }
+}

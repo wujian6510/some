@@ -1,0 +1,12 @@
+.table{
+  :global(.ant-table-placeholder){
+    border-bottom: none;
+  }
+}
+.panel{
+  margin-bottom: $padding-l;
+  & + .panel{
+    border-top: 1px solid $dividing-color;
+    padding-top: $padding-l;
+  }
+}

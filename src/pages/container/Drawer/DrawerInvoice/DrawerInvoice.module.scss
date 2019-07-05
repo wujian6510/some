@@ -1,0 +1,28 @@
+.tips{
+  padding: $padding-s;
+  background: $bg-gray;
+  color: $color-text-paragraph;
+  .body{
+    & + .footer{
+      margin-top: $padding-xs;
+    }
+  }
+}
+
+.Form{
+  padding-top: $padding-l;
+  :global(.ant-row.ant-form-item){
+    margin-bottom: $padding-m;
+    :global(.ant-form-item-label){
+      text-align: left;
+    }
+    :global(.ant-form-item-control){
+      line-height: normal;
+    }
+  }
+  .section{
+    & + .section{
+      margin-top: $padding-s;
+    }
+  }
+}

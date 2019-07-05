@@ -1,0 +1,52 @@
+.wrap{
+  margin: 0 auto;
+  background: $bg-default;
+  display: flex;
+  border: 1px solid $border-color;
+  .contacts,
+  .details{
+    flex: 1;
+    padding: $padding-l;
+  }
+  .contacts{
+    .panel{
+      margin-bottom: 0;
+    }
+    .search{
+      display: flex;
+      align-items: center;
+      margin-bottom: $padding-s;
+      .select{
+        width: 100px;
+      }
+      .input{
+        flex: 1;
+      }
+    }
+    .list{
+      .item{
+        display: flex;
+        padding: $padding-s 0;
+        align-items: center;
+        border-bottom: 1px solid $border-color;
+        &:last-child{
+          border-bottom: 0;
+        }
+      }
+      .itemCont{
+        flex: 1;
+        & + .itemExtra{
+          margin-left: $padding-l;
+        }
+      }
+      .itemExtra{
+        :global(.ant-btn + .ant-btn){
+          margin-left: $padding-s;
+        }
+      }
+    }
+    & + .details{
+      border-left: 1px solid $border-color;
+    }
+  }
+}

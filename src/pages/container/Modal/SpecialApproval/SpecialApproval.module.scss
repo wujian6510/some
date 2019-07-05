@@ -1,0 +1,5 @@
+.container{
+  :global(.ant-modal-body){
+    padding: $padding-m $padding-l*2;
+  }
+}

@@ -1,0 +1,157 @@
+.wrap{
+  margin: 0 auto;
+  min-width: $min-width;
+  width: $default-width;
+  padding-top: 70px + $padding-l;
+}
+
+.table{
+  :global(.ant-table-tbody){
+    & > tr > td{
+      border-bottom: none;
+    }
+    & > tr.parents > td{
+      border-top: 1px solid $border-color;
+    }
+  }
+  :global(.ant-table-footer){
+    text-align: right;
+    padding: 0;
+    padding-top: $padding-m;
+    background: $bg-default;
+    :global(.ant-btn + .ant-btn){
+      margin-left: $padding-s;
+    }
+    &::before{
+      background: $border-color;
+    }
+  }
+  .bar{
+    color: $color-text-base;
+    display: flex;
+    align-items: center;
+    .barMain{
+      flex: 1;
+      & + .barCtrl{
+        margin-left: $padding-l;
+      }
+    }
+    .barTit,
+    .span{
+      display: inline;
+    }
+    .barTit{
+      &,:global(.ant-checkbox-wrapper){
+        font-weight: bold;
+        font-size: $font-size-xl;
+      }
+      :global(.ant-checkbox){
+        padding: 0 12px;
+      }
+    }
+    .span{
+      margin-left: $padding-l;
+      font-size: $font-size-lg;
+    }
+  }
+}
+
+.container{
+  dl,dt,dd{
+    margin: 0;
+    padding: 0;
+  }
+  .order{
+    background: $bg-default;
+    padding: $padding-l;
+    border: 1px solid $border-color;
+    dl{
+      dt{
+        display: flex;
+        align-items: center;
+        .tit{
+          font-size: $font-size-xl;
+          font-weight: bold;
+          color: $color-text-base;
+          flex: 1;
+          width: 1px;
+        }
+        & + dd{
+          margin-top: $padding-m;
+        }
+      }
+      & + dl{
+        margin-top: $padding-l;
+      }
+    }
+    & + .column{
+      margin-top: $padding-l;
+    }
+    & + .total{
+      margin-top: $padding-l;
+    }
+  }
+  .column{
+    background: $bg-gray;
+    padding: $padding-l;
+    background: $bg-default;
+    border: 1px solid $border-color;
+    dl{
+      padding-bottom: $padding-l;
+      display: flex;
+      align-items: center;
+      & + dl{
+        border-top: 1px solid $border-color;
+        padding-top: $padding-l;
+      }
+      &:last-child{
+        padding-bottom: 0;
+      }
+      dt{
+        font-size: $font-size-xl;
+        font-weight: bold;
+        color: $color-text-base;
+        width: 100px;
+        & + .dd{
+          margin-left: $padding-l;
+        }
+      }
+      .dd{
+        flex: 1;
+        & + .ft{
+          margin-left: $padding-l;
+        }
+        .span{
+          display: inline;
+          margin-right: $padding-xl;
+        }
+        .total{
+          text-align: right;
+          font-size: $font-size-lg;
+          font-weight: bold;
+          color: $color-text-base;
+        }
+      }
+      .ft{
+        span + a,
+        span + :global(.ant-btn),
+        a + :global(.ant-btn),
+        :global(.ant-btn + .ant-btn),
+        :global(.ant-btn + a){
+          margin-left: $padding-xl;
+        }
+      }
+    }
+    & + .total{
+      margin-top: $padding-l;
+    }
+  }
+}
+
+.footer{
+  padding: $padding-l 0;
+  text-align: right;
+  :global(.ant-btn + .ant-btn){
+    margin-left: $padding-s;
+  }
+}

@@ -1,0 +1,84 @@
+// 主题色
+$primary-color: #4477EE;
+$success-color: #33BB66;
+$danger-color: #FF3344;
+$warning-color: #FF9933;
+$info-color: #7788AA;
+
+// 背景
+$bg-default: #fff;
+$bg-gray: #fafafa;
+$bg-hover: mix(#fff, $primary-color, 90%);
+
+// 间距
+$padding: 5px;
+$padding-xs: $padding;  // 5px
+$padding-s: $padding*2; // 10px
+$padding-m: $padding*3; // 15px
+$padding-l: $padding*4; // 20px
+$padding-xl: $padding*6; // 30px
+
+// 文字大小
+$font-size-sm: 12px;
+$font-size-base: 12px;
+$font-size-lg: 14px;
+$font-size-xl: 16px;
+$font-size-heading: 20px;
+$font-size-strong: 30px;
+
+// 文字颜色
+$color-text-base: #333;            // 基本
+$color-text-paragraph: #848587;       // 段落
+$color-text-secondary: #c6c7cc;       // 辅助色
+$color-text-base-inverse: #fff;    // 基本 - 反色
+$color-text-strong: #FF3344;       //价格、强调的数值，包含单位
+$color-link: #007AFF;             // 链接
+
+// 线条
+$border-color: #E6E9F2;
+$dividing-color: #F4F6F8;
+
+// 圆角
+$border-radius-base: 4px;
+$border-radius-sm: 2px;
+
+// 表格
+$panel-bg: #F4F6F8;
+$table-header-bg: $panel-bg;
+
+// 宽度
+$min-width: 1000px;
+$default-width: 90%;
+
+$form-line-height: 32px;
+
+// 表单背景
+$input-bg: #F4F6F8;
+$input-border-color: #F4F6F8;
+
+
+// 清除浮动
+@mixin clearfix {
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+@mixin textEllipsis {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+
+@mixin HeightOverflowY{
+  flex: 1;
+  height: 1px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

@@ -1,0 +1,74 @@
+.wrap{
+  position: relative;
+  line-height: normal;
+  display: inline-block;
+  width: 100%;
+}
+
+.dropdown{
+  width: 100%;
+  min-width: 400px;
+  padding: 0;
+  :global(.ant-popover-arrow){
+    display: none;
+  }
+}
+
+.container{
+  margin-top: $padding-m;
+  border: 1px solid $border-color;
+  display: flex;
+  ul,li{
+    margin: 0;
+    padding: 0;
+  }
+  .continent,
+  .country{
+    max-height: 250px;
+    overflow-x: hidden;
+    overflow-y: auto;
+    .item{
+      cursor: pointer;
+      height: 32px;
+      padding: $padding-xs $padding-s;
+      color: $color-text-paragraph;
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      overflow: hidden;
+      &:hover{
+        background: $bg-hover;
+        .itemExtra{
+          right: 0;
+        }
+      }
+      .itemCont{
+        flex: 1;
+        & + .itemExtra{
+          margin-left: $padding-s;
+        }
+      }
+      .itemExtra{
+        position: relative;
+        right: -100%;
+        transition: right .3s;
+      }
+      .name{
+        font-size: $font-size-lg;
+        color: $color-text-base;
+        & + .code{
+          margin-left: $padding-xs;
+        }
+      }
+    }
+  }
+  .continent{
+    width: 110px;
+    & + .country{
+      border-left: 1px solid $border-color;
+    }
+  }
+  .country{
+    flex: 1;
+  }
+}

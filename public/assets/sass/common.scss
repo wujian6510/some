@@ -1,0 +1,534 @@
+@import "./variable.scss";
+
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+form,
+fieldset,
+button,
+input,
+textarea,
+hr,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+fieldset,
+img {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+i,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ol,
+ul,
+li {
+  list-style: none;
+}
+
+hr {
+  height: 0;
+  border: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+a,
+a:hover,
+a:active,
+a:link {
+  text-decoration: none;
+}
+
+/*CSS reset*/
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  position: relative;
+  height: 100%;
+  font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei", "Hiragino Sans GB", "Heiti SC", "WenQuanYi Micro Hei", sans-serif;
+}
+
+body {
+  background: $bg-gray;
+}
+
+.root,
+.page{
+  position: relative;
+  height: 100%;
+}
+
+.root{
+  min-width: 1000px;
+}
+
+.page {
+  &.open{
+    display: block;
+  }
+  &.hide{
+    display: none;
+  }
+  &.gray{
+    background: $bg-gray;
+  }
+}
+
+// 工具class
+
+.text-primary{
+  color: $primary-color;
+}
+.text-success{
+  color: $success-color;
+}
+.text-danger{
+  color: $danger-color;
+}
+.text-warning{
+  color: $warning-color;
+}
+.text-info{
+  color: $info-color;
+}
+.text-strong{
+  color: $color-text-strong;
+}
+.text-link{
+  color: $color-link;
+}
+
+a.text-primary{
+  color: $primary-color;
+  &:hover,
+  &:active{
+    color: mix(#fff, $primary-color, 10%);
+  }
+}
+a.text-success{
+  color: $success-color;
+  &:hover,
+  &:active{
+    color: mix(#fff, $success-color, 10%);
+  }
+}
+a.text-danger{
+  color: $danger-color;
+  &:hover,
+  &:active{
+    color: mix(#fff, $danger-color, 10%);
+  }
+}
+a.text-warning{
+  color: $warning-color;
+  &:hover,
+  &:active{
+    color: mix(#fff, $warning-color, 10%);
+  }
+}
+a.text-info{
+  color: $info-color;
+  &:hover,
+  &:active{
+    color: mix(#fff, $info-color, 10%);
+  }
+}
+a.text-strong{
+  color: $color-text-strong;
+  &:hover,
+  &:active{
+    color: mix(#fff, $color-text-strong, 10%);
+  }
+}
+a.text-link{
+  color: $color-link;
+  &:hover,
+  &:active{
+    color: mix(#fff, $color-link, 10%);
+  }
+}
+
+.text-center{
+  text-align: center;
+}
+.text-left{
+  text-align: left;
+}
+.text-right{
+  text-align: right;
+}
+
+.ant-btn{
+  &.btn-success{
+    background: $success-color;
+    border-color: $success-color;
+    color: $color-text-base-inverse;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      background: mix(#fff, $success-color, 20%);
+      border-color: $success-color;
+      color: $color-text-base-inverse;
+    }
+  }
+  &.btn-info{
+    background: $info-color;
+    border-color: $info-color;
+    color: $color-text-base-inverse;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      background: mix(#fff, $info-color, 20%);
+      border-color: $info-color;
+      color: $color-text-base-inverse;
+    }
+  }
+  &.btn-warn{
+    background: $warning-color;
+    border-color: $warning-color;
+    color: $color-text-base-inverse;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      background: mix(#fff, $warning-color, 20%);
+      border-color: $warning-color;
+      color: $color-text-base-inverse;
+    }
+  }
+  &.btn-danger{
+    background: $danger-color;
+    border-color: $danger-color;
+    color: $color-text-base-inverse;
+    &:hover,
+    &:focus,
+    &:active,
+    &.active{
+      background: mix(#fff, $danger-color, 20%);
+      border-color: $danger-color;
+      color: $color-text-base-inverse;
+    }
+  }
+}
+
+.btns{
+  .ant-btn + .ant-btn{
+    margin-left: $padding-s;
+  }
+}
+
+.ant-form{
+  &.ant-form-horizontal.form{
+    .ant-row{
+      &:last-child{
+        .ant-row.ant-form-item{
+          margin-bottom: 0;
+          .ant-btn + .ant-btn{
+            margin-left: $padding-s;
+          }
+        }
+      }
+    }
+    .ant-row.ant-form-item{
+      margin-bottom: $padding-s;
+    }
+  }
+  &.ant-form-inline.form-inline{
+    .ant-row.ant-form-item:last-child{
+      margin-right: 0;
+      .ant-btn + .ant-btn{
+        margin-left: $padding-s;
+      }
+    }
+  }
+  &.ant-form-horizontal.form-horizontal{
+    .ant-btn + .ant-btn{
+      margin-left: $padding-s;
+    }
+    .ant-row.ant-form-item{
+      margin-bottom: $padding-s;
+      textarea.ant-input{
+        margin-top: 4px;
+      }
+      .ant-form-item-label{
+        text-align: left;
+      }
+    }
+    .ant-row:last-child{
+      .ant-row.ant-form-item{
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+/* ui组件样式-到公共样式方便调整 */
+.ui-panel{
+  margin-bottom: $padding-l;
+  .ui-panel-head{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .ui-panel-title{
+      font-size: $font-size-xl;
+      color: $color-text-base;
+      & + .ui-panel-extra{
+        margin-left: $padding-m;
+      }
+    }
+    & + .ui-panel-body,
+    & + .ui-panel-footer{
+      padding-top: $padding-m;
+    }
+  }
+  .ui-panel-body{
+    & + .ui-panel-body,
+    & + .ui-panel-footer{
+      padding-top: $padding-m;
+    }
+  }
+  &.large{
+    .ui-panel-head{
+      .ui-panel-title{
+        font-size: $font-size-heading;
+      }
+    }
+  }
+}
+//*----- PagePanel样式 -----*//
+
+/* 重置antd样式(把表单置灰，设置没有变量的表单元素置灰，并保留状态) */
+
+.input-group{
+  display: inline-table;
+  width: 100%;
+  position: relative;
+  line-height: normal;
+  &>.ant-input-group-wrapper,
+  &>.ant-input-wrapper.ant-input-group{
+    .ant-input-group-addon{
+      &:after{
+        content: ':';
+      }
+    }
+  }
+  &.required{
+    &>.ant-input-group-wrapper,
+    &>.ant-input-wrapper.ant-input-group{
+      .ant-input-group-addon{
+        &:before{
+          content: '*';
+          margin-right: $padding-xs;
+          color: $color-text-strong;
+        }
+      }
+    }
+  }
+  .addon-before{
+    display: table-cell;
+    border: 1px solid $input-border-color;
+    background: $input-bg;
+    padding: 0 $padding-s;
+    line-height: 1;
+    width: 1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: $border-radius-base 0 0 $border-radius-base;
+    border-right: none;
+    padding-right: $padding-xs;
+    &:after{
+      content: ":"
+    }
+    &.disabled{
+      background: #f5f5f5;
+      color: $color-text-secondary;
+      cursor: not-allowed;
+    }
+    &.required{
+      &:before{
+        content: '*';
+        margin-right: $padding-xs;
+        color: $color-text-strong;
+      }
+    }
+    & + .select{
+      .ant-select-selection.ant-select-selection--single{
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        .ant-select-selection__rendered{
+          margin-left: $padding-xs;
+        }
+      }
+    }
+    & + .datePicker{
+      .ant-calendar-picker{
+        .ant-calendar-picker-input.ant-input{
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
+      }
+    }
+  }
+  &.has-extra{
+    .ant-input-group-wrapper + *{
+      margin-left: -1px;
+    }
+  }
+  .ant-ipnut{
+    &:active,
+    &:focus,
+    &:hover{
+      z-index: 2;
+    }
+  }
+  .ant-btn{
+    padding-left: $padding-s;
+    padding-right: $padding-s;
+    border-color: $input-border-color;
+    background: $input-bg;
+    &:active,
+    &:hover{
+      border-color: $primary-color;
+      z-index: 2;
+    }
+  }
+  .select{
+    display: table-cell;
+  }
+  .datePicker{
+    display: table-cell;
+    width: 100%;
+    line-height: normal;
+    .ant-calendar-picker{
+      width: 100%;
+    }
+  }
+  &.ant-input-group{
+    display: inline-flex !important;
+    align-items: center;
+    width: 100%;
+    &>.ant-input-group-wrapper{
+      flex: 1;
+      top: 0 !important;
+      border-radius: 0;
+      .ant-input{
+        border-radius: 0;
+      }
+    }
+  }
+}
+// 按钮组，没有前缀的组件，需要使用按钮组来实现前缀或后置按钮
+
+.input{
+  &>.ant-input-group-wrapper,
+  &>.ant-input-wrapper.ant-input-group{
+    .ant-input-group-addon{
+      &:after{
+        content: ':';
+      }
+    }
+  }
+  &.required{
+    &>.ant-input-group-wrapper,
+    &>.ant-input-wrapper.ant-input-group{
+      .ant-input-group-addon{
+        &:before{
+          content: '*';
+          margin-right: $padding-xs;
+          color: $color-text-strong;
+        }
+      }
+    }
+  }
+}
+
+.ant-select{
+  .ant-select-selection{
+    background: $input-bg;
+    border-color: $input-border-color;
+  }
+}
+
+.ant-calendar{
+  .ant-calendar-input{
+    background: $bg-default !important;
+  }
+}
+
+.ant-input-number{
+  border-color: $input-border-color !important;
+}
+
+.has-error{
+  .input-group{
+    .addon-before{
+      border-color: $danger-color;
+    }
+    .ant-btn{
+      border-color: $danger-color;
+    }
+  }
+  .ant-select{
+    .ant-select-selection{
+      border-color: $danger-color;
+    }
+  }
+  .ant-input-number{
+    border-color: $danger-color !important;
+  }
+}

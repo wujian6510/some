@@ -1,0 +1,41 @@
+.wrap{
+  position: relative;
+  line-height: normal;
+  display: inline-block;
+  width: 100%;
+  .input{
+    :global(.ant-input-group-addon){
+      &:after{
+        content: ':'
+      }
+    }
+    &:global(.required){
+      :global(.ant-input-group-addon){
+        &:before{
+          content: '*';
+          margin-right: $padding-xs;
+          color: $color-text-strong;
+        }
+      }
+    }
+  }
+}
+
+.dropdown{
+  width: 100%;
+  min-width: 400px;
+  padding: 0;
+  :global(.ant-popover-content){
+    :global(.ant-popover-arrow){
+      display: none;
+    }
+    :global(.ant-popover-inner-content){
+      padding: $padding-m $padding-l;
+      :global(.ant-form.ant-form-horizontal.form){
+        :global(.ant-row.ant-form-item:last-child){
+          margin-bottom: 0;
+        }
+      }
+    }
+  }
+}

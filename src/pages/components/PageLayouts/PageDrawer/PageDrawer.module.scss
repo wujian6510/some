@@ -1,0 +1,36 @@
+.wrap{
+  &>:global(.ant-drawer-content-wrapper){
+    &>:global(.ant-drawer-content){
+      &>:global(.ant-drawer-wrapper-body){
+        display: flex;
+        flex-direction: column;
+        overflow: hidden !important;
+        &>:global(.ant-drawer-header){
+          padding: $padding-m $padding-l;
+          background: $bg-gray;
+        }
+        &>:global(.ant-drawer-body){
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          padding: 0;
+          overflow: hidden;
+          .body{
+            position: relative;
+            padding: $padding-m;
+            @include HeightOverflowY;
+          }
+          .footer{
+            border-top: 1px solid $border-color;
+            padding: $padding-m;
+            background: $bg-default;
+            text-align: right;
+            :global(.ant-btn + .ant-btn){
+              margin-left: $padding-s;
+            }
+          }
+        }
+      }
+    }
+  }
+}

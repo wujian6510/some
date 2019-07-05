@@ -1,0 +1,43 @@
+.modal{
+  :global(.ant-modal-title){
+    display: flex;
+    align-items: center;
+    .title{
+      flex: 1;
+    }
+  }
+}
+
+
+.steps{
+  margin-bottom: $padding-xl;
+}
+
+.form{
+  :global(.ant-row.ant-form-item){
+    margin-bottom: $padding-m;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    :global(.ant-form-item-label){
+      line-height: normal;
+      font-weight: bold;
+      margin-bottom: $padding-s;
+    }
+    :global(.ant-form-item-control){
+      line-height: normal;
+    }
+  }
+  .section{
+    .span{
+      display: inline;
+      & + .span{
+        margin-left: $padding-m;
+      }
+    }
+    & + .section,
+    & + :global(.ant-alert){
+      margin-top: $padding-s;
+    }
+  }
+}

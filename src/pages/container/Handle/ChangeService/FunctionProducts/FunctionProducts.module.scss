@@ -1,0 +1,58 @@
+.cell{
+  display: flex;
+  dl,dt,dd,ul,li{
+    margin: 0;
+    padding: 0;
+  }
+  .dl{
+    flex: 1;
+    & + .dl{
+      border-left: 1px solid $border-color;
+    }
+    .dt,
+    .search,
+    .list .item{
+      padding: 0 $padding-m;
+    }
+    .dt{
+      padding-top: $padding-m;
+      font-size: $font-size-lg;
+      color: $color-text-base;
+      & + .dd,
+      & + .search{
+        margin-top: $padding-s;
+      }
+    }
+    .search{
+      & + .dd,
+      & + .search{
+        margin-top: $padding-s;
+      }
+    }
+    .dd{
+      max-height: 300px;
+      overflow-y: auto;
+      overflow-x: hidden;
+    }
+    .form{
+      padding: 0 $padding-m;
+    }
+    .list{
+      .item{
+        display: flex;
+        align-items: center;
+        padding-top: $padding-xs;
+        padding-bottom: $padding-xs;
+        &:hover{
+          background: mix(#fff, $primary-color, 90%);
+        }
+        .itemCont{
+          flex: 1;
+          & + .itemCtrl{
+            margin-left: $padding-m;
+          }
+        }
+      }
+    }
+  }
+}

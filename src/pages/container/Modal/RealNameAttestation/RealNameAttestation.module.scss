@@ -1,0 +1,42 @@
+.wrap{
+  :global(.ant-modal-header){
+    padding-bottom: 0;
+  }
+  .head{
+    :global(.ant-tabs-bar){
+      margin-bottom: 0;
+      border-bottom: none;
+      :global(.ant-tabs-nav-container){
+        margin-bottom: 0;
+        :global(.ant-tabs-tab){
+          margin-right: $padding-xl;
+          font-size: $font-size-xl;
+          padding-top: 0;
+          padding-left: 0;
+          padding-right: 0;
+        }
+      }
+    }
+  }
+  .form{
+    .group{
+      display: flex;
+      .full{
+        flex: 1;
+        & + :global(.ant-btn){
+          margin-left: $padding-s;
+        }
+      }
+    }
+    :global(.ant-row.ant-form-item){
+      margin-bottom: $padding-m;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      :global(.ant-col.ant-form-item-label){
+        line-height: normal;
+        margin-bottom: $padding-s;
+      }
+    }
+  }
+}

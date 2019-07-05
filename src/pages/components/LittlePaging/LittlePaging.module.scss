@@ -1,0 +1,17 @@
+.group{
+  display: inline-flex;
+  align-items: center;
+  :global(.iconfont){
+    vertical-align: baseline;
+  }
+  :global(.ant-btn){
+    border: none;
+    background: $panel-bg;
+    width: 18px;
+    height: 18px;
+    border-radius: 9px;
+  }
+  .text{
+    padding: 0 $padding-xs;
+  }
+}

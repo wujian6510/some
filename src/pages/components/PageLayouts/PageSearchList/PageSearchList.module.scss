@@ -1,0 +1,19 @@
+.container{
+  padding: $padding-m;
+  .form{
+    & + .alert,
+    & + .main{
+      margin-top: $padding-m;
+    }
+  }
+  .alert{
+    & + .main{
+      margin-top: $padding-m;
+    }
+  }
+  .main{
+    :global(.ant-table-wrapper > .ant-spin-nested-loading > .ant-spin-container){
+      background: $bg-default;
+    }
+  }
+}

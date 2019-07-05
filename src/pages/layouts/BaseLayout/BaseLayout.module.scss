@@ -1,0 +1,142 @@
+.head{
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #EEEDF1;
+  min-width: $min-width;
+  height: 65px;
+  padding: 0;
+  padding-left: $padding-xl;
+  display: flex;
+  align-items: center;
+  .ctrl,
+  .info{
+    width: 300px;
+  }
+  .ctrl{
+    display: flex;
+    align-items: center;
+    .logo{
+      display: none;
+      color: $primary-color;
+      font-size: $font-size-heading;
+      // & + .btns{
+      //   margin-left: $padding-xl;
+      // }
+    }
+    .btns{
+      display: flex;
+      align-items: center;
+      :global(.ant-btn-group + .ant-btn),
+      :global(.ant-btn + .ant-btn){
+        margin-left: $padding-xs;
+      }
+      :global(.ant-btn-group){
+        :global(.ant-btn + .ant-btn){
+          margin-left: -1px;
+        }
+      }
+    }
+  }
+  .nav{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    .item{
+      padding: 0 $padding-s;
+      line-height: normal;
+      color: $color-text-base;
+      :global(.iconfont){
+        margin: 0 auto 2px auto;
+        display: block;
+        text-align: center;
+        font-size: 26px;
+      }
+      .text{
+        font-size: $font-size-base;
+        text-align: center;
+      }
+      &:global(.active){
+        color: $primary-color;
+      }
+    }
+  }
+  .info{
+    text-align: right;
+    .btn{
+      display: none;
+      padding: 0 $padding-xl;
+      background: none;
+      border: none;
+      height: 65px;
+      line-height: normal;
+      outline: none;
+      .avatar{
+        display: inline-block;
+        color: $color-text-base-inverse;
+        background:rgba(0,0,0,0.1);
+        overflow: hidden;
+        vertical-align: middle;
+        line-height: 32px;
+        :global(.iconfont){
+          text-align: center;
+          font-size: $font-size-heading;
+        }
+        img{
+          display: block;
+        }
+        &,img{
+          width: 32px;
+          height: 32px;
+          border-radius: 16px;
+        }
+      }
+      .text{
+        display: inline-block;
+        vertical-align: middle;
+        padding: 0 $padding-s;
+        font-size: $font-size-lg;
+        text-align: $color-text-base;
+        max-width: 120px;
+        @include textEllipsis;
+      }
+    }
+  }
+}
+
+
+
+.toolbar{
+  position: fixed;
+  right: 0;
+  top: 20%;
+  z-index: 100;
+  .menu{
+    .btn{
+      width: 32px;
+      height: auto;
+      white-space: normal;
+      display: block;
+      font-size: $font-size-base;
+      padding: $padding-s 0;
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+      color: $color-text-base-inverse;
+      background: $warning-color;
+      border-color: $warning-color;
+      :global(.iconfont){
+        margin: 0 auto $padding-xs auto;
+        display: block;
+        font-size: $font-size-xl;
+      }
+      .span{
+        margin: 0 auto;
+        line-height: 1.3;
+        width: $font-size-base;
+        display: block;
+        font-size: $font-size-base;
+      }
+    }
+  }
+}

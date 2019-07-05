@@ -1,0 +1,128 @@
+.group{
+  display: block;
+  line-height: normal;
+  .inline{
+    display: inline-block;
+    min-width: 120px;
+    margin-right: $padding-s;
+    .col{
+      text-align: center;
+      padding: $padding-xs $padding-s;
+    }
+  }
+  .col{
+    border: 1px solid $border-color;
+    display: block;
+    padding: $padding-xs $padding-s;
+    margin-bottom: $padding-s;
+    position: relative;
+    border-radius: $border-radius-base;
+    background: $bg-default;
+    .label{
+      font-size: $font-size-base;
+      font-weight: normal;
+      color: $color-text-base;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      & + .content{
+        margin-top: $padding-s;
+      }
+    }
+    .content{
+      font-size: $font-size-base;
+      color: $color-text-paragraph;
+    }
+    .tag{
+      font-size: $font-size-xl;
+      position: absolute;
+      z-index: 6;
+      right: 0;
+      bottom: 0;
+      display: none;
+    }
+    &:global(.ant-radio-wrapper){
+      line-height: normal;
+      margin: 0 0 $padding-s 0;
+      height: auto;
+      border: none;
+      padding: 0;
+      :global(.ant-radio){
+        display: none;
+        & + span{
+          position: relative;
+          padding: 0;
+          line-height: 1.5;
+          display: block;
+          border: 1px solid $border-color;
+          padding: $padding-xs $padding-s;
+          border-radius: $border-radius-base;
+          overflow: hidden;
+        }
+        &:global(.ant-radio-checked){
+          & + span{
+            border-color: $primary-color;
+            box-shadow: inset 0 0 0 1px $primary-color;
+            .tag{
+              color: $primary-color;
+              display: block;
+            }
+          }
+          &:global(.ant-radio-disabled){
+            & + span{
+              box-shadow: inset 0 0 0 1px $border-color;
+              .tag{
+                color: $color-text-secondary;
+                display: block;
+              }
+            }
+          }
+        }
+        &:global(.ant-radio-disabled){
+          & + span{
+            border-color: $border-color;
+            background: $bg-gray;
+            &,.label{
+              color: $color-text-secondary;
+            }
+          }
+        }
+      }
+    }
+    :global(.ant-checkbox){
+      display: none;
+      & + span{
+        padding: 0;
+        display: block;
+      }
+    }
+    &:global(.ant-checkbox-wrapper-disabled){
+      border-color: $border-color;
+      box-shadow: inset 0 0 0 1px $border-color;
+      .label,
+      .content{
+        color: $color-text-secondary;
+      }
+    }
+    &:global(.ant-checkbox-wrapper-checked){
+      border-color: $primary-color;
+      box-shadow: inset 0 0 0 1px $primary-color;
+      .tag{
+        color: $primary-color;
+        display: block;
+      }
+      &:global(.ant-checkbox-wrapper-disabled){
+        border-color: $border-color;
+        box-shadow: inset 0 0 0 1px $border-color;
+        .label,
+        .content{
+          color: $color-text-secondary;
+        }
+        .tag{
+          color: $color-text-secondary;
+          display: block;
+        }
+      }
+    }
+  }
+}

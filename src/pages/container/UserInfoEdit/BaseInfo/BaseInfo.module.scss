@@ -1,0 +1,49 @@
+.panel{
+  margin-bottom: $padding-m;
+}
+
+.info{
+  display: flex;
+  .pic{
+    &,img{
+      display: block;
+      width: 72px;
+      height: 86px;
+    }
+    & + .main{
+      margin-left: $padding-l;
+    }
+  }
+  .main{
+    flex: 1;
+  }
+  .name{
+    font-size: $font-size-xl;
+    font-weight: bold;
+    color: $color-text-base;
+    margin-bottom: $padding-m;
+  }
+  .row{
+    .col{
+      margin-right: $padding-xl;
+      display: inline-block;
+      .colTit{
+        color: $color-text-base;
+      }
+      color: $color-text-paragraph;
+      .span{
+        & + .span{
+          margin-left: $padding-s;
+        }
+      }
+      a.span{
+        :global(.iconfont){
+          font-size: $font-size-xl;
+        }
+      }
+    }
+    & + .row{
+      margin-top: $padding-s;
+    }
+  }
+}

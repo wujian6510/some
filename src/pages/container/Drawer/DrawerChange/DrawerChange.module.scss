@@ -1,0 +1,52 @@
+.drawer{
+  padding: 0 !important;
+}
+
+.head{
+  border-bottom: 1px solid $border-color;
+  padding: $padding-m $padding-l;
+  .item{
+    @include textEllipsis;
+    & + .item{
+      margin-top: $padding-xs;
+    }
+  }
+  .itemTit,
+  .itemSpan{
+    display: inline;
+    margin-right: $padding-m;
+  }
+  .itemTit{
+    color: $color-text-base;
+  }
+  .itemSpan{
+    color: $color-text-paragraph;
+  }
+}
+
+.column{
+  padding: $padding-m $padding-l;
+  dl,dd,dt{
+    margin: 0;
+  }
+  dl{
+    margin-bottom: $padding-s;
+  }
+  dt{
+    color: $color-text-base;
+    font-weight: bold;
+    & + dd{
+      margin-top: $padding-s;
+    }
+  }
+  dd{
+    overflow: hidden;
+    .col{
+      margin-bottom: $padding-s;
+      :global(.ant-btn){
+        display: block;
+        width: 100%;
+      }
+    }
+  }
+}

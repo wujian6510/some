@@ -1,0 +1,40 @@
+.head{
+  background: $bg-default;
+  border-bottom: 1px solid $border-color;
+  .tabs{
+    margin: 0 auto;
+    min-width: $min-width;
+    width: $default-width;
+    background: $bg-default;
+    :global(.ant-tabs-bar){
+      border-bottom: none;
+      :global(.ant-tabs-tab){
+        padding-bottom: $padding-s;
+      }
+    }
+    :global(.ant-tabs-nav-wrap){
+      margin-bottom: 0;
+    }
+  }
+}
+
+.container{
+  margin: 0 auto;
+  padding-top: $padding-m;
+  min-width: $min-width;
+  width: $default-width;
+  .link{
+    color: $color-text-base;
+    &:hover,
+    &:global(.active){
+      color: $primary-color;
+    }
+  }
+}
+
+.popover{
+  max-width: 300px;
+  max-height: 300px;
+  overflow-x: hidden;
+  overflow-y: auto;
+}

@@ -1,0 +1,64 @@
+.drawerBody{
+  padding-top: 0 !important;
+  .tabs{
+    :global(.ant-tabs-content){
+      padding-top: $padding-l;
+    }
+  }
+  .search{
+    width: 200px;
+    margin-right: $padding-m;
+  }
+  .ctrl{
+    a{
+      :global(.iconfont){
+        margin-right: $padding-xs;
+      }
+    }
+    a + a{
+      margin-left: $padding-m;
+    }
+  }
+  .dl{
+    position: relative;
+    display: flex;
+    .dt{
+      flex: 1;
+      width: 1px;
+      font-size: $font-size-lg;
+      color: $color-text-base;
+      @include textEllipsis;
+      & + .dd{
+        padding-left: $padding-m;
+      }
+    }
+    .dd{
+      color: $color-text-paragraph;
+      font-size: $font-size-lg;
+      a{
+        color: $color-text-paragraph;
+        :global(.iconfont){
+          position: relative;
+          font-size: $font-size-lg;
+          top: -1px;
+          margin-right: $padding-xs;
+        }
+        &:hover{
+          color: $primary-color;
+        }
+        & + a{
+          margin-left: $padding-xs;
+        }
+      }
+    }
+  }
+}
+
+.popover{
+  max-width: 400px;
+  :global(.ant-popover-inner-content){
+    max-height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}

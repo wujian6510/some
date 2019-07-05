@@ -1,0 +1,115 @@
+.formGroup{
+  & + .formGroup,
+  & + :global(.ant-row){
+    margin-top: $padding-s;
+  }
+  &:last-child{
+    :global(.ant-row.ant-form-item){
+      margin-bottom: 0;
+    }
+  }
+  :global(.ant-row + .ant-row){
+    margin-top: $padding-s;
+  }
+}
+.form{
+  :global(.ant-row.ant-form-item){
+    margin-bottom: $padding-s;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  :global(.ant-row:last-child){
+    :global(.ant-row.ant-form-item){
+      margin-bottom: 0;
+    }
+  }
+}
+.formItem{
+  .dt{
+    width: 60px;
+    line-height: 32px;
+  }
+  :global(.ant-form-item-control){
+    line-height: 32px;
+  }
+  .dd{
+    position: relative;
+    flex: 1;
+    &:global(.hide){
+      display: none;
+    }
+    :global(.ant-row.ant-form-item){
+      :global(.ant-col.ant-form-item-label){
+        width: auto;
+        margin-right: $padding-s;
+      }
+      &:global(.strong){
+        :global(.ant-col.ant-form-item-label){
+          &,label{
+            color: $danger-color;
+          }
+        }
+      }
+    }
+    .dd{
+      line-height: normal;
+      :global(.ant-row){
+        :global(.ant-row.ant-form-item){
+          margin-bottom: $padding-s;
+        }
+        &:last-child{
+          :global(.ant-row.ant-form-item){
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &:global(.girdGroup){
+    :global(.ant-form-item-control-wrapper){
+      :global(.ant-form-item-control){
+        &,:global(.ant-form-item-children){
+          line-height: normal !important;
+        }
+      }
+    }
+  }
+}
+
+.checkboxGrid{
+  width: 100%;
+  overflow: hidden;
+  line-height: 32px;
+  .col{
+    display: flex;
+    align-items: center;
+    :global(.ant-checkbox-wrapper){
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    a{
+      white-space: nowrap;
+      margin-left: $padding-xs;
+    }
+  }
+}
+
+
+.tag{
+  border-color: mix(#fff, $primary-color, 85%);
+  background: mix(#fff, $primary-color, 85%);
+}
+
+.tags{
+  overflow: hidden;
+}
+
+.strong{
+  font-size: $font-size-heading;
+  font-weight: bold;
+  color: $color-text-base;
+}
+
+

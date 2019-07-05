@@ -1,0 +1,32 @@
+.group{
+  border: 1px solid $border-color;
+  transition: box-shadow .3s;
+  background: $bg-default;
+  &:hover,
+  &:global(.active){
+    box-shadow: inset 0 0 0 3px $border-color;
+  }
+  .column{
+    padding: $padding-l $padding-xl;
+    position: relative;
+    & + .column{
+      border-top: 1px solid $border-color;
+    }
+    .title{
+      font-size: $font-size-heading;
+      font-weight: bold;
+      color: $primary-color;
+      & + .main{
+        margin-top: $padding-m;
+      }
+    }
+  }
+  .footer{
+    border-top: 1px solid $border-color;
+    padding: $padding-l $padding-xl;
+    text-align: right;
+    :global(.ant-btn + .ant-btn){
+      margin-left: $padding-xs;
+    }
+  }
+}

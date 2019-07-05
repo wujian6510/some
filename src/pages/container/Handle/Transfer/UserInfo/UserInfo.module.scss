@@ -1,0 +1,57 @@
+.main{
+  .head{
+    .name{
+      font-size: $font-size-heading;
+      color: $color-text-base;
+      font-weight: bold;
+      vertical-align: middle;
+      margin-right: $padding-m;
+    }
+    & + .body,
+    & + .ctrl{
+      padding-top: $padding-m;
+    }
+  }
+  .body{
+    dl{
+      font-size: $font-size-sm;
+      &,dt,dd{
+        font-weight: normal;
+        display: inline;
+      }
+      margin-right: $padding-xl;
+      dt{
+        color: $color-text-base;
+      }
+      dd{
+        color: $color-text-paragraph;
+      }
+      .strong{
+        color: $primary-color;
+      }
+    }
+    & + .body,
+    & + .ctrl,
+    & + .form{
+      padding-top: $padding-m;
+    }
+  }
+  .ctrl{
+    font-size: $font-size-sm;
+    a{
+      color: $primary-color;
+      margin-right: $padding-l;
+      :global(.iconfont){
+        font-size: $font-size-xl;
+        margin-right: $padding-xs;
+      }
+    }
+  }
+  .form{
+    display: flex;
+    .cont{
+      margin-right: $padding-m;
+      flex: 1;
+    }
+  }
+}

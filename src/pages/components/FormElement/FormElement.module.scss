@@ -1,0 +1,240 @@
+.grid{
+  margin-bottom: $padding-s;
+}
+.formItem{
+  display: flex;
+  margin-bottom: $padding-s;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  .label,
+  .dt,
+  .dd{
+    line-height: 32px;
+  }
+  .label{
+    width: 100px;
+    text-align: left;
+    color: $color-text-paragraph;
+    @include textEllipsis;
+  }
+  .dt{
+    width: 60px;
+    padding: 0 $padding-s;
+    @include textEllipsis;
+  }
+  .dd{
+    position: relative;
+    flex: 1;
+    &:global(.hide){
+      display: none;
+    }
+    :global(.ant-row.ant-form-item){
+      :global(.ant-col.ant-form-item-label){
+        width: auto;
+        margin-right: $padding-s;
+      }
+      &:global(.strong){
+        :global(.ant-col.ant-form-item-label){
+          &,label{
+            color: $danger-color;
+          }
+        }
+      }
+    }
+    :global(.ant-row.ant-form-item){
+      display: flex;
+      margin-bottom: $padding-s;
+      &:last-child{
+        margin-bottom: 0;
+      }
+      &>:global(.ant-form-item-label){
+        text-align: left;
+        width: 100px;
+        line-height: $form-line-height;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        &,label{
+          color: $color-text-paragraph;
+        }
+      }
+      &>:global(.ant-form-item-control-wrapper){
+        flex: 1;
+        :global(.ant-form-item-control){
+          line-height: $form-line-height;
+          :global(.ant-form-item-children){
+            display: flex;
+            line-height: $form-line-height;
+          }
+        }
+      }
+    }
+    .dd{
+      line-height: normal;
+      :global(.ant-row){
+        :global(.ant-row.ant-form-item){
+          margin-bottom: $padding-s;
+        }
+        &:last-child{
+          :global(.ant-row.ant-form-item){
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  &:global(.girdGroup){
+    :global(.ant-form-item-control-wrapper){
+      :global(.ant-form-item-control){
+        &,:global(.ant-form-item-children){
+          line-height: normal !important;
+        }
+      }
+    }
+  }
+}
+
+.checkboxGrid{
+  width: 100%;
+  overflow: hidden;
+  line-height: 32px;
+  .col{
+    display: flex;
+    align-items: center;
+    :global(.ant-checkbox-wrapper){
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+    a{
+      white-space: nowrap;
+      margin-left: $padding-xs;
+    }
+  }
+}
+
+
+.tag{
+  border-color: mix(#fff, $primary-color, 85%);
+  background: mix(#fff, $primary-color, 85%);
+}
+
+.tags{
+  overflow: hidden;
+}
+
+.strong{
+  font-size: $font-size-heading;
+  font-weight: bold;
+  color: $color-text-base;
+}
+
+.selectGroup{
+  display: table;
+  width: 100%;
+  border-radius: $border-radius-base;
+  .after{
+    display: table-cell;
+    border: 1px solid $input-border-color;
+    background: $input-bg;
+    padding: 0 $padding-s;
+    line-height: 1;
+    width: 1px;
+    white-space: nowrap;
+    vertical-align: middle;
+    border-radius: $border-radius-base 0 0 $border-radius-base;
+    border-right: none;
+    padding-right: $padding-xs;
+    &:after{
+      content: ":"
+    }
+    &:global(.disabled){
+      background: #f5f5f5;
+      color: $color-text-secondary;
+      cursor: not-allowed;
+    }
+    & + .select{
+      :global(.ant-select-selection){
+        margin-left: -1px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        :global(.ant-select-selection__rendered){
+          margin-left: $padding-xs;
+        }
+      }
+    }
+  }
+  .select{
+    display: table-cell;
+    &:global(.has-extra){
+      :global(.ant-select-selection){
+        border-right: none;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+    }
+  }
+  .select + *{
+    border-radius: 0;
+    margin-left: -1px;
+    &:last-child{
+      border-top-right-radius: $border-radius-base;
+      border-bottom-right-radius: $border-radius-base;
+    }
+  }
+  :global(.ant-btn){
+    padding-left: $padding-s;
+    padding-right: $padding-s;
+    border-color: $input-border-color;
+    background: $input-bg;
+    &:active,
+    &:hover{
+      border-color: $primary-color;
+      z-index: 2;
+    }
+  }
+}
+
+.inputGroup{
+  display: flex !important;
+  &>:global(.ant-input-group-wrapper),
+  &>:global(.ant-input-wrapper.ant-input-group){
+    flex: 1;
+    top: 0;
+    right: -1px;
+    :global(.ant-input-group-addon){
+      padding-right: $padding-xs;
+      &:after{
+        content: ':'
+      }
+      & + :global(.ant-input){
+        padding-left: $padding-xs;
+        margin-left: -1px;
+      }
+    }
+  }
+  :global(.ant-ipnut){
+    &:active,
+    &:focus,
+    &:hover{
+      z-index: 2;
+    }
+  }
+  :global(.ant-btn){
+    padding-left: $padding-s;
+    padding-right: $padding-s;
+    border-color: $input-border-color;
+    background: $input-bg;
+    &:active,
+    &:hover{
+      border-color: $primary-color;
+      z-index: 2;
+    }
+  }
+  &:global(.has-extra){
+    :global(.ant-input){
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+  }
+}

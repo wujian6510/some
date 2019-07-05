@@ -1,0 +1,24 @@
+.wrap{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 200;
+  background: $bg-default;
+  box-shadow:0px 2px 8px 0px rgba(0,0,0,0.05);
+  border-top: 1px solid $border-color;
+  .container{
+    margin: 0 auto;
+    min-width: $min-width;
+    width: $default-width;
+    display: flex;
+    padding: $padding-s 0;
+    :global(.ant-btn + .ant-btn){
+      margin-left: $padding-s;
+    }
+  }
+  .main{
+    flex: 1;
+    text-align: right;
+  }
+}

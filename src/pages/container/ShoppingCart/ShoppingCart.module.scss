@@ -1,0 +1,111 @@
+.main{
+  dl,dt,dd{
+    margin: 0;
+    padding: 0;
+  }
+  .dl{
+    margin-bottom: $padding-l;
+    .dt{
+      font-size: $font-size-lg;
+      font-weight: bold;
+      color: $color-text-base;
+      & + .dd{
+        margin-top: $padding-m;
+      }
+    }
+    .group{
+      display: block;
+      width: 100%;
+      .item{
+        padding: 0 $padding-l;
+        display: flex;
+        align-items: center;
+        .itemCont{
+          flex: 1;
+          width: 1px;
+          @include textEllipsis;
+          :global(.ant-checkbox-wrapper + span),
+          :global(.ant-checkbox + span){
+            padding-left: $padding-m;
+          }
+          & + .itemCtrl{
+            margin-left: $padding-s;
+          }
+        }
+        .itemCtrl{
+          :global(.ant-btn){
+            font-size: $font-size-lg;
+            padding: 0;
+            height: auto;
+            background: none;
+            border: none;
+          }
+        }
+        & + .item{
+          margin-top: $padding-s;
+        }
+      }
+      .column{
+        padding: $padding-m $padding-l;
+        display: flex;
+        background: $bg-gray;
+        margin-bottom: $padding-m;
+        p{
+          margin: 0;
+          padding: 0;
+        }
+        .checkbox{
+          margin-top: 3px;
+          & + .colMain{
+            margin-left: $padding-m;
+          }
+        }
+        .colMain{
+          flex: 1;
+          .colHead{
+            display: flex;
+            font-size: $font-size-lg;
+            font-weight: bold;
+            color: $color-text-base;
+            & + .colBody{
+              margin-top: $padding-s;
+            }
+          }
+          .colBody{
+            color: $color-text-paragraph;
+            .section{
+              & + .section{
+                margin-top: $padding-xs;
+              }
+            }
+          }
+          & + .colExtra{
+            margin-left: $padding-m;
+          }
+        }
+        .colExtra{
+          .strong{
+            color: $color-text-strong;
+            font-size: $font-size-lg;
+          }
+          .section{
+            & + .section{
+              margin-top: $padding-xs;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.footer{
+  display: flex;
+  .ftMain{
+    text-align: left;
+    flex: 1;
+    & + .ftExtra{
+      margin-left: $padding-l;
+    }
+  }
+}

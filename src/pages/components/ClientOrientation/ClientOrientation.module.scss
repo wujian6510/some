@@ -1,0 +1,39 @@
+.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .group{
+    display: flex;
+    align-items: center;
+  }
+  .title{
+    font-size: $font-size-lg;
+    font-weight: bold;
+    color: $color-text-base;
+    margin-right: $padding-l;
+  }
+  .select{
+    width: 100px;
+    margin-left: -1px;
+    :global(.ant-select-selection){
+      border-radius: $border-radius-base 0 0 $border-radius-base;
+      :global(.ant-select-selection__rendered){
+        font-size: $font-size-base;
+      }
+    }
+  }
+  .input{
+    width: 300px;
+    :global(.ant-select-search--inline .ant-select-search__field){
+      border-radius: 0 0;
+    }
+    & + :global(.ant-btn){
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+  .btn{
+    min-width: 100px;
+    margin-left: $padding-s;
+  }
+}

@@ -1,0 +1,61 @@
+.main{
+  .head{
+    .name{
+      font-size: $font-size-heading;
+      color: $color-text-base;
+      font-weight: bold;
+      vertical-align: middle;
+      margin-right: $padding-m;
+    }
+    & + .body{
+      padding-top: $padding-s;
+    }
+    & + .ctrl{
+      padding-top: $padding-xl;
+    }
+  }
+  .body{
+    dl{
+      font-size: $font-size-sm;
+      &,dt,dd{
+        font-weight: normal;
+        display: inline;
+      }
+      margin-right: $padding-xl;
+      dt{
+        color: $color-text-base;
+      }
+      dd{
+        color: $color-text-paragraph;
+      }
+      .strong{
+        color: $primary-color;
+      }
+    }
+    & + .body{
+      padding-top: $padding-s;
+    }
+    & + .ctrl{
+      padding-top: $padding-xl;
+    }
+  }
+  .ctrl{
+    font-size: $font-size-sm;
+    a{
+      color: $primary-color;
+      margin-right: $padding-l;
+      :global(.iconfont){
+        position: relative;
+        top: -1px;
+        font-size: $font-size-heading;
+        margin-right: $padding-xs;
+      }
+    }
+  }
+}
+
+.popver{
+  .title{
+    margin-bottom: $padding-s;
+  }
+}

@@ -1,0 +1,25 @@
+.group{
+  border-bottom: 1px solid $border-color;
+  padding-bottom: $padding-m;
+  & + .group{
+    padding-top: $padding-m;
+  }
+  &:last-child{
+    border-bottom: none;
+  }
+  :global(.ant-row.ant-form-item){
+    margin-bottom: 0;
+    :global(.ant-form-item-label){
+      text-align: left;
+    }
+    :global(.ant-form-item-control),
+    :global(.ant-input){
+      text-align: right;
+    }
+  }
+  .strong{
+    font-size: $font-size-xl;
+    font-weight: bold;
+    color: $danger-color;
+  }
+}
