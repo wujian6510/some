@@ -89,8 +89,8 @@ class Handle extends Component {
             }
             <HandleCommonInfo commonAttr={commonAttr} />
             <PageFooter>
-              <Button type="default" size="large">取消录入</Button>
-              <Button size="large" className="btn-warn">填写完成,去结算</Button>
+              <Button onClick={() => { this.props.history.push('/reception'); }} type="default" size="large">取消录入</Button>
+              <Button onClick={() => { this.props.history.push('/statements'); }} size="large" className="btn-warn">填写完成,去结算</Button>
             </PageFooter>
             <DrawerCreatAccount />
           </div>

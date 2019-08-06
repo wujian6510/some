@@ -14,7 +14,7 @@ export default class ReceptionPackage extends Component {
           {
             items.map((item, index) => (
               <li className={style.item} key={index}>
-                <a>{item.name}</a>
+                <a onClick={() => { this.props.history.push('/handle'); }}>{item.name}</a>
               </li>
             ))
           }

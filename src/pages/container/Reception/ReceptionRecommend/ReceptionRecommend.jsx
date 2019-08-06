@@ -19,7 +19,7 @@ export default class ReceptionRecommend extends Component {
                   {item.title}
                 </div>
                 <div className={style.ctrl}>
-                  <a>立即办理</a>
+                  <a onClick={() => { this.props.history.push('/handle'); }}>立即办理</a>
                   <Divider type="vertical" />
                   <a>发送短信</a>
                 </div>

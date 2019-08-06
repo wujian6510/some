@@ -17,7 +17,8 @@ const router = [
   {
     path: '/',
     layout: BaseLayout,
-    component: Home,
+    keepAlive: true,
+    component: Reception,
   },
   {
     path: '/reception',

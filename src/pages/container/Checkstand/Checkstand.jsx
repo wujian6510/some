@@ -237,10 +237,10 @@ export default class Checkstand extends Component {
             </dl>
           </div>
           <div className={style.footer}>
-            <Button htmlType="button">取消订单</Button>
+            <Button onClick={() => { this.props.history.push('/handle'); }} htmlType="button">取消订单</Button>
             <Button htmlType="button">免填单预览</Button>
             <Button htmlType="button">拍照留存</Button>
-            <Button htmlType="button" className="btn-warn">受理完成</Button>
+            <Button onClick={() => { this.props.history.push('/reception'); }} htmlType="button" className="btn-warn">受理完成</Button>
           </div>
         </div>
         <DrawerInvoice visible={invoiceVisible} onClose={this.onToggleInvoice} />

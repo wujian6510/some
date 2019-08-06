@@ -82,6 +82,7 @@ class Reception extends Component {
             <div className={style.extra}>
               <ReceptionRecommend
                 data={RecommendData}
+                history={this.props.history}
                 onMoreRecommend={this.onToggleRecommend}
               />
             </div>

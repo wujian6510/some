@@ -127,14 +127,12 @@ export default class Statements extends Component {
               总金额：
               <span className="text-strong">￥399.00</span>
             </div>
-            <Button htmlType="button">继续办理其它业务</Button>
-            <Button htmlType="button">放弃办理</Button>
+            <Button htmlType="button" onClick={() => { push('/reception'); }}>继续办理其它业务</Button>
+            <Button htmlType="button" onClick={() => { push('/reception'); }}>放弃办理</Button>
             <Button
               htmlType="button"
               className="btn-warn"
-              onClick={() => {
-                push('/checkstand');
-              }}
+              onClick={() => { push('/checkstand'); }}
             >
               去收费
             </Button>
